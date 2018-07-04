@@ -1,0 +1,69 @@
+Mesh:
+  x:
+    label: "n0blg"
+    points: 11
+    range:
+      - -10.0
+      - 10.0
+  y:
+    label: "p0blg"
+    points: 7
+    range: 
+      - -3.0
+      - 4.0
+
+  parameters:
+    function: "mfunc_vblg_fixed"
+    delta1: 0.1
+    delta2: 0.1
+    n0mlg: 0.05
+    k: 1.0
+    b: 1.0
+
+  Independent Variables:
+    Vtop:
+      channel: 0
+      limits:
+        - 2.0
+        - -2.0
+    Vbot:
+      channel: 1
+      limits:
+        - -10.0
+        - 10.0
+    Vmlg:
+      channel: 2
+      limits: 
+        - -10.0
+        - 10.0
+        
+  # MeshConstraints:
+  #   constraint1: 
+  #     expr: "n0blg + 0.5* p0blg"
+  #     min: -2.0
+  #     max: 2.0
+
+
+Bridge Settings:
+  frequency: 51123.0
+  timeconstant: 0.001
+  ref_atten: 20.0
+  sample_atten: 20.0
+  tolerance: 0.001
+  iter: 3
+  balance_tc: 0.1
+  rebalance: False
+  Balance Point:
+    x: 0.0
+    y: 0.0
+  DAC Read Channels:
+    lckx: 0
+    lcky: 1
+    lowFreqX: 2
+    lowFreqY: 3
+
+
+
+
+
+
